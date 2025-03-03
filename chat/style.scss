@@ -1,0 +1,342 @@
+@import
+'../mixins.scss';
+*{
+  @include mp_0;
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+a{
+  @include black_classic_a;
+  font-size: 2rem;
+}
+h2{
+  font:{
+    size: 2.8rem;
+    weight: 500;
+  }
+}
+p{
+  color: gray;
+  letter-spacing: 0.08rem;
+  font:{
+    size: 1.8rem;
+    weight: 300;
+  }
+}
+.green_span{
+  font-size: 2rem;
+  color: green;
+}
+.section_1_active{
+  border: 1px solid green;
+  color: green;
+}
+button{
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.display_none{
+  visibility: hidden;
+}
+.standart_button{
+  width: 100%;
+  height: 15%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all .2s;
+  font-size: 2rem;
+
+  &:hover{
+    background-color: green;
+    color: white;
+  }
+}
+header{
+  @include fixed;
+  background: white;
+  width: 100vw;
+  height: 8vh;
+  @include flex-center;
+
+  nav{
+    width: 70%;
+    height: 100%;
+    @include flex-between;
+
+    img{
+      cursor: pointer;
+    }
+    .nav_menu{
+      width: 40%;
+      height: 100%;
+      @include flex-between;
+    }
+    .nav_button{
+      width: 30%;
+      height: 100%;
+      @include flex-between;
+
+      button{
+        border: none;
+        @include flex-center;
+        background: transparent;
+      }
+      .profile{
+        width: 17%;
+      }
+    }
+  }
+}
+main{
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  height: 90vh;
+  @include flex-between-column;
+
+  .section_1{
+    width: 70%;
+    height: 95%;
+    @include flex-between;
+
+    .people{
+      width: 30%;
+      height: 100%;
+      @include flex-between-column;
+
+      input{
+        border: none;
+        width: 100%;
+        height: 5%;
+        font-size: 2.2rem;
+        border-radius: 2rem;
+        background: rgba(218, 222, 255, 1);
+
+        &::placeholder{
+          position: relative;
+          left: 5%;
+        }
+      }
+      &__list{
+        width: 100%;
+        height: 90%;
+        @include grid(1, 6, 1%);
+
+        .profile{
+          width: 100%;
+          height: 100%;
+          @include flex-around;
+          border-radius: 3rem;
+
+          img{
+            width: 20%;
+          }
+          &__text{
+            width: 50%;
+            height: 80%;
+            @include flex-around-column;
+            align-items: start;
+          }
+        }
+      }
+    }
+    .chat{
+      width: 70%;
+      height: 90%;
+      @include flex-between-column;
+      @include b_border;
+      border-radius: 2rem;
+
+      &__profile{
+        width: 100%;
+        height: 13%;
+        @include flex-around;
+        border-bottom: 1px solid #e1e1e1;
+
+        img{
+          width: 8%;
+        }
+        .name{
+          width: 80%;
+          height: 80%;
+          @include flex-around-column;
+          align-items: start;
+        }
+      }
+      &__block{
+        width: 100%;
+        height: 79%;
+        @include flex-between-column;
+
+        .your_text{
+          width: 90%;
+          height: 8%;
+          @include flex-center;
+          justify-content: end;
+
+          p{
+            width: 60%;
+            height: 80%;
+            font-size: 2rem;
+            color: black;
+          }
+          .block_4{
+            border-radius: 2rem;
+            @include flex-center;
+            width: 5%;
+            height: 55%;
+            background-color: lightgreen;
+          }
+        }
+        .enemy_photo{
+          width: 90%;
+          height: 15%;
+          @include flex-center;
+          justify-content: start;
+
+          .block_3{
+            @include grid(4, 1, 2%);
+            width: 50%;
+            height: 100%;
+
+            img{
+              width: 100%;
+              height: 100%;
+              border-radius: 2rem;
+            }
+          }
+        }
+        .enemy_text{
+          width: 90%;
+          height: 8%;
+          @include flex-center;
+          justify-content: start;
+
+          p{
+            color: black;
+            width: 90%;
+            height: 80%;
+            font-size: 2rem;
+          }
+          .block_1{
+            border-radius: 2rem;
+            @include flex-center;
+            width: 34%;
+            height: 100%;
+            background-color: #FFEDDD;
+          }
+          .block_2{
+            border-radius: 2rem;
+            @include flex-center;
+            width: 15%;
+            height: 55%;
+            background-color: #FFEDDD;
+          }
+        }
+      }
+      &__send{
+        width: 100%;
+        height: 8%;
+        border-bottom-right-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        @include b_border;
+        @include flex-around;
+        background: rgba(240, 240, 240, 1);
+
+        img{
+          cursor: pointer;
+          width: 5%;
+        }
+        input{
+          border: none;
+          width: 60%;
+          height: 80%;
+          font-size: 2.2rem;
+          border-radius: 2rem;
+          background: rgba(218, 222, 255, 1);
+
+          &::placeholder{
+            position: relative;
+            left: 5%;
+          }
+        }
+        .standart_button{
+          height: 80%;
+          width: 20%;
+        }
+      }
+    }
+  }
+}
+footer{
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  height: 35vh;
+  @include flex-center;
+
+  section{
+    width: 70%;
+    height: 90%;
+    @include flex-between-column;
+
+    div{
+      &:first-child{
+        width: 100%;
+        height: 60%;
+        @include flex-between;
+        align-items: start;
+
+        h2{
+          font-size: 3.5rem;
+        }
+        .s_5_block{
+          width: 15%;
+          height: 100%;
+          @include flex-between-column;
+          justify-content: start;
+          align-items: start;
+
+          p{
+            cursor: pointer;
+            line-height: 200%;
+
+            &:first-child{
+              line-height: 300%;
+            }
+          }
+        }
+        .web{
+          width: 20%;
+          height: 60%;
+          @include flex-between-column;
+          align-items: start;
+
+          .list{
+            width: 100%;
+            height: 50%;
+            @include flex-between;
+
+            img{
+              cursor: pointer;
+              transition: 0.2s;
+
+              &:hover{
+                mask-image: linear-gradient(rgba(0, 128, 0, 1), rgba(0, 128, 0, 1));
+              }
+            }
+          }
+        }
+      }
+      &:last-child{
+        width: 60%;
+        height: 20%;
+        @include flex-center;
+      }
+    }
+  }
+}

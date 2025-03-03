@@ -1,0 +1,381 @@
+@import
+        '../mixins.scss';
+*{
+  @include mp_0;
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+a{
+  @include black_classic_a;
+  font-size: 2rem;
+}
+h2{
+  font:{
+    size: 2.8rem;
+    weight: 500;
+  }
+}
+p{
+  color: gray;
+  letter-spacing: 0.08rem;
+  font:{
+    size: 1.8rem;
+    weight: 300;
+  }
+}
+button{
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.display_none{
+  visibility: hidden;
+}
+.standart_button{
+  width: 100%;
+  height: 15%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all .2s;
+  font-size: 2rem;
+
+  &:hover{
+    background-color: green;
+    color: white;
+  }
+}
+header{
+  @include fixed;
+  background: white;
+  width: 100vw;
+  height: 8vh;
+  @include flex-center;
+
+  nav{
+    width: 70%;
+    height: 100%;
+    @include flex-between;
+
+    img{
+      cursor: pointer;
+    }
+    .nav_menu{
+      width: 40%;
+      height: 100%;
+      @include flex-between;
+    }
+    .nav_button{
+      width: 30%;
+      height: 100%;
+      @include flex-between;
+
+      button{
+        border: none;
+        @include flex-center;
+        background: transparent;
+      }
+      .profile{
+        width: 17%;
+      }
+    }
+  }
+}
+main{
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  height: 360vh;
+  @include flex-between-column;
+
+  .section_1{
+    width: 70%;
+    height: 80vh;
+    @include flex-evenly;
+    flex-direction: column;
+
+    .search{
+      width: 50%;
+      height: 20%;
+      @include flex-between;
+
+      input{
+        width: 100%;
+        height: 35%;
+        border: 1px solid #e1e1e1;
+        font-size: 2rem;
+        border-bottom-left-radius: 4rem;
+        border-top-left-radius: 4rem;
+
+        &::placeholder{
+          position: relative;
+          left: 5%;
+        }
+      }
+      button{
+        width: 30%;
+        height: 35%;
+        border: none;
+        color: white;
+        background-color: orange;
+        border-bottom-right-radius: 4rem;
+        border-top-right-radius: 4rem;
+      }
+    }
+    span{
+      color: green;
+    }
+    h1{
+      letter-spacing: 0.05rem;
+      width: 54%;
+      text-align: center;
+      font:{
+        size: 4rem;
+        weight: 700;
+      }
+    }
+    .janr{
+      width: 100%;
+      height: 15%;
+      @include flex-between-column;
+
+      div{
+        width: 50%;
+        height: 45%;
+        @include flex-between;
+
+        p{
+          width: 24%;
+          height: 70%;
+          border-radius: 4rem;
+          border: 1px solid #e1e1e1;
+          cursor: pointer;
+          color: rgb(90, 90, 90);
+          text-align: center;
+          vertical-align: middle;
+          @include flex-center;
+
+          &:hover{
+            border: 1px solid green;
+            color: green;
+          }
+        }
+        &:last-child{
+          width: 60%;
+        }
+      }
+      .s_1_active{
+        border: 1px solid green;
+        color: rgb(0, 128, 0);
+      }
+      button{
+        width: 24%;
+        height: 74%;
+        border: 1px solid orange;
+        color: orange;
+        background: rgba(0, 0, 0, 0);
+        border-radius: 4rem;
+      }
+    }
+  }
+  .section_2{
+    width: 70%;
+    height: 280vh;
+    @include flex-between-column;
+
+    div{
+      width: 100%;
+      height: 9%;
+      @include flex-around-column;
+
+      div{
+        &:first-child{
+          width: 100%;
+          height: 20%;
+          @include flex-between;
+
+          span{
+            font:{
+              size: 2.8rem;
+              weight: 600;
+            }
+            color: green;
+          }
+        }
+        &:last-child{
+          width: 100%;
+          height: 70%;
+          @include flex-between;
+
+          div{
+            &:first-child {
+              width: 40%;
+              height: 100%;
+              @include flex-between;
+
+              img{
+                width: 30%;
+              }
+              div {
+                width: 65%;
+                height: 100%;
+                @include flex-evenly-column;
+                align-items: start;
+
+                h3{
+                  font:{
+                    size: 2rem;
+                    weight: 500;
+                  }
+                }
+                div{
+                  width: 50%;
+                  height: 20%;
+                  @include flex-between;
+
+                  img{
+                    cursor: pointer;
+                    width: 12%;
+                  }
+                }
+              }
+            }
+            &:last-child{
+              width: 30%;
+              height: 100%;
+              @include flex-around-column;
+              align-items: end;
+            }
+          }
+        }
+      }
+      &:first-child{
+        width: 100%;
+        height: 3%;
+        @include flex-between;
+        flex-direction: row;
+
+        h1{
+          font:{
+            size: 3.4rem;
+            weight: 500;
+          }
+        }
+        div{
+          width: 40%;
+          height: 100%;
+          @include flex-between;
+          flex-direction: row;
+
+          h2{
+            font-size: 2rem;
+          }
+          input{
+            width: 28%;
+            height: 35%;
+            border: none;
+            font-size: 2rem;
+            border-radius: 4rem;
+
+            &::placeholder{
+              position: relative;
+              left: 5%;
+            }
+          }
+        }
+      }
+      &:last-child{
+        width: 100%;
+        height: 3%;
+        @include flex-center;
+
+        button{
+          width: 20%;
+          height: 60%;
+          border: 1px solid green;
+          color: green;
+          border-radius: 4rem;
+          background: rgba(0, 0, 0, 0);
+
+          &:hover{
+            background-color: green;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+footer{
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  height: 35vh;
+  @include flex-center;
+
+  section{
+    width: 70%;
+    height: 90%;
+    @include flex-between-column;
+
+    div{
+      &:first-child{
+        width: 100%;
+        height: 60%;
+        @include flex-between;
+        align-items: start;
+
+        h2{
+          font-size: 3.5rem;
+        }
+        .s_5_block{
+          width: 15%;
+          height: 100%;
+          @include flex-between-column;
+          justify-content: start;
+          align-items: start;
+
+          p{
+            cursor: pointer;
+            line-height: 200%;
+
+            &:first-child{
+              line-height: 300%;
+            }
+          }
+        }
+        .web{
+          width: 20%;
+          height: 60%;
+          @include flex-between-column;
+          align-items: start;
+
+          .list{
+            width: 100%;
+            height: 50%;
+            @include flex-between;
+
+            img{
+              cursor: pointer;
+              transition: 0.2s;
+
+              &:hover{
+                mask-image: linear-gradient(rgba(0, 128, 0, 1), rgba(0, 128, 0, 1));
+              }
+            }
+          }
+        }
+      }
+      &:last-child{
+        width: 60%;
+        height: 20%;
+        @include flex-center;
+      }
+    }
+  }
+}

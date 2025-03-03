@@ -1,0 +1,386 @@
+@import
+'../mixins.scss';
+*{
+  @include mp_0;
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+a{
+  @include black_classic_a;
+  font-size: 2rem;
+}
+h2{
+  font:{
+    size: 2.8rem;
+    weight: 500;
+  }
+}
+p{
+  color: gray;
+  letter-spacing: 0.08rem;
+  font:{
+    size: 1.8rem;
+    weight: 300;
+  }
+}
+.show{
+  display: flex !important;
+}
+.hide{
+  display: none !important;
+}
+.green_span{
+  font-size: 2.5rem;
+  color: green;
+}
+.section_1_active{
+  border: 1px solid green;
+  color: green;
+}
+button{
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.display_none{
+  visibility: hidden;
+}
+.standart_button{
+  width: 100%;
+  height: 15%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all .2s;
+  font-size: 2rem;
+
+  &:hover{
+    background-color: green;
+    color: white;
+  }
+}
+header{
+  @include fixed;
+  background: white;
+  width: 100vw;
+  height: 8vh;
+  @include flex-center;
+
+  nav{
+    width: 70%;
+    height: 100%;
+    @include flex-between;
+
+    img{
+      cursor: pointer;
+    }
+    .nav_menu{
+      width: 40%;
+      height: 100%;
+      @include flex-between;
+    }
+    .nav_button{
+      width: 30%;
+      height: 100%;
+      @include flex-between;
+
+      button{
+        border: none;
+        @include flex-center;
+        background: transparent;
+      }
+      .profile{
+        width: 17%;
+      }
+    }
+  }
+}
+main{
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  @include flex-between-column;
+
+  .section_1{
+    width: 70%;
+    height: 125vh;
+    @include flex-between;
+    align-items: start;
+
+    .s_1_text{
+      width: 55%;
+      height: 100%;
+      @include b_border;
+      border-radius: 3rem;
+      @include flex-between-column;
+      align-items: start;
+
+      p{
+        position: relative;
+        left: 2.5%;
+      }
+      h2{
+        position: relative;
+        left: 2.5%;
+        width: 90%;
+      }
+      &__top{
+        width: 100%;
+        height: 10%;
+        @include flex-around;
+
+        h1{
+          font-size: 3.5rem;
+          width: 60%;
+        }
+        .value{
+          width: 30%;
+          height: 90%;
+          @include flex-between-column;
+          align-items: end;
+        }
+      }
+      &__teg{
+        width: 60%;
+        height: 3%;
+        @include flex-evenly;
+      }
+      &__file{
+        position: relative;
+        left: 2.5%;
+        width: 40%;
+        height: 20%;
+        @include flex-between-column;
+        align-items: start;
+
+        .document{
+          width: 100%;
+          height: 30%;
+          @include flex-between;
+
+          img{
+            width: 12%;
+          }
+          h2{
+            font-size: 2.2rem;
+            font-weight: 400;
+          }
+        }
+      }
+      &__bottom{
+        position: relative;
+        left: 2.5%;
+        width: 90%;
+        height: 8%;
+        @include flex-between;
+
+        .standart_button{
+          width: 30%;
+          height: 70%;
+        }
+      }
+    }
+    .s_1_profile{
+      width: 40%;
+      height: 16%;
+      @include b_border;
+      border-radius: 2rem;
+      @include flex-around;
+
+      .text{
+        width: 70%;
+        height: 90%;
+        @include flex-evenly-column;
+        align-items: start;
+
+        .stars{
+          width: 70%;
+          height: 30%;
+          @include flex-between;
+
+          &__star_block{
+            width: 60%;
+            @include flex-between;
+          }
+        }
+      }
+      img{
+        width: 25%;
+      }
+    }
+  }
+  .section_2{
+    width: 70%;
+    height: 65vh;
+    @include flex-between;
+    display: none;
+
+    .s_2_text {
+      width: 55%;
+      height: 95%;
+      @include b_border;
+      border-radius: 3rem;
+      @include flex-around-column;
+      align-items: start;
+
+      .text_block{
+        width: 90%;
+        height: 11%;
+        @include flex-between-column;
+        align-items: start;
+
+        h2{
+          position: relative;
+          left: 2.5%;
+        }
+      }
+      .imgs{
+        position: relative;
+        left: 2.5%;
+        width: 45%;
+        @include grid(3, 1, 2%);
+        height: 12%;
+
+        .add_photo{
+          width: 100%;
+          height: 100%;
+          @include b_border;
+          background: rgba(220, 220, 220, 1);
+          border-radius: 2rem;
+          @include flex-evenly-column;
+
+          img{
+            width: 65%;
+          }
+        }
+        img{
+          width: 100%;
+        }
+      }
+      .input_block{
+        width: 50%;
+        height: 6%;
+        @include flex-between-column;
+        align-items: start;
+
+        input{
+          width: 100%;
+          height: 50%;
+          @include b_border;
+
+          &::placeholder{
+            position: relative;
+            left: 5%;
+          }
+        }
+      }
+      h1{
+        position: relative;
+        left: 2.5%;
+        font-size: 3.5rem;
+        width: 90%;
+        text-align: start;
+      }
+      .standart_button{
+        width: 28%;
+        height: 7%;
+        position: relative;
+        left: 2.5%;
+      }
+      .input_block{
+        position: relative;
+        left: 2.5%;
+        width: 70%;
+        height: 30%;
+        @include flex-between-column;
+        align-items: start;
+
+        input{
+          width: 100%;
+          height: 80%;
+          font-size: 2.5rem;
+          @include b_border;
+
+          &::placeholder{
+            position: relative;
+            left: 5%;
+            bottom: 30%;
+          }
+        }
+      }
+    }
+    .display_none{
+      width: 40%;
+    }
+  }
+}
+footer{
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  height: 35vh;
+  @include flex-center;
+
+  section{
+    width: 70%;
+    height: 90%;
+    @include flex-between-column;
+
+    div{
+      &:first-child{
+        width: 100%;
+        height: 60%;
+        @include flex-between;
+        align-items: start;
+
+        h2{
+          font-size: 3.5rem;
+        }
+        .s_5_block{
+          width: 15%;
+          height: 100%;
+          @include flex-between-column;
+          justify-content: start;
+          align-items: start;
+
+          p{
+            cursor: pointer;
+            line-height: 200%;
+
+            &:first-child{
+              line-height: 300%;
+            }
+          }
+        }
+        .web{
+          width: 20%;
+          height: 60%;
+          @include flex-between-column;
+          align-items: start;
+
+          .list{
+            width: 100%;
+            height: 50%;
+            @include flex-between;
+
+            img{
+              cursor: pointer;
+              transition: 0.2s;
+
+              &:hover{
+                mask-image: linear-gradient(rgba(0, 128, 0, 1), rgba(0, 128, 0, 1));
+              }
+            }
+          }
+        }
+      }
+      &:last-child{
+        width: 60%;
+        height: 20%;
+        @include flex-center;
+      }
+    }
+  }
+}
