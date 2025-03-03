@@ -1,0 +1,550 @@
+@import
+'../mixins.scss';
+*{
+  @include mp_0;
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+a{
+  @include black_classic_a;
+  font-size: 2rem;
+}
+.show{
+  display: flex !important;
+  @include flex-center;
+  scrollbar-width: none;
+}
+h2{
+  font:{
+    size: 2.8rem;
+    weight: 500;
+  }
+}
+.fast_search{
+  width: 10%;
+  height: 3%;
+  left: 0;
+  top: 10%;
+  position: absolute;
+  background: orange;
+  color: white;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  @include flex-center;
+  cursor: pointer;
+
+  div{
+    width: 60%;
+    height: 50%;
+
+    p{
+      width: 80%;
+      color: white;
+      font-size: 3rem;
+    }
+  }
+}
+p{
+  color: gray;
+  letter-spacing: 0.08rem;
+  font:{
+    size: 1.8rem;
+    weight: 300;
+  }
+}
+.section_1_active{
+  border: 1px solid green;
+  color: green;
+}
+button{
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.display_none{
+  visibility: hidden;
+}
+.standart_button{
+  width: 100%;
+  height: 15%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all .2s;
+  font-size: 2rem;
+
+  &:hover{
+    background-color: green;
+    color: white;
+  }
+}
+header{
+  @include fixed;
+  background: white;
+  width: 100vw;
+  height: 8vh;
+  @include flex-center;
+
+  nav{
+    width: 70%;
+    height: 100%;
+    @include flex-between;
+
+    img{
+      cursor: pointer;
+    }
+    .nav_menu{
+      width: 40%;
+      height: 100%;
+      @include flex-between;
+    }
+    .nav_button{
+      width: 30%;
+      height: 100%;
+      @include flex-between;
+
+      button{
+        border: none;
+        @include flex-center;
+        background: transparent;
+      }
+      .profile{
+        width: 17%;
+      }
+    }
+  }
+}
+main{
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  height: 270vh;
+  @include flex-between-column;
+
+  .section_1{
+    width: 70%;
+    height: 90vh;
+    @include flex-center;
+
+    .popup{
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      @include fixed;
+      z-index: 1000;
+      bottom: 0;
+      display: none;
+
+      &__cont{
+        width: 70%;
+        height: 80vh;
+        @include flex-evenly;
+        flex-direction: column;
+
+        p{
+          cursor: pointer;
+        }
+        .search{
+          width: 50%;
+          height: 20%;
+          @include flex-between;
+
+          input{
+            width: 100%;
+            height: 35%;
+            border: 1px solid #e1e1e1;
+            font-size: 2rem;
+            border-bottom-left-radius: 4rem;
+            border-top-left-radius: 4rem;
+
+            &::placeholder{
+              position: relative;
+              left: 5%;
+            }
+          }
+          button{
+            width: 30%;
+            height: 35%;
+            border: none;
+            color: white;
+            background-color: orange;
+            border-bottom-right-radius: 4rem;
+            border-top-right-radius: 4rem;
+          }
+        }
+        span{
+          color: green;
+        }
+        h1{
+          letter-spacing: 0.05rem;
+          width: 54%;
+          text-align: center;
+          font:{
+            size: 4rem;
+            weight: 700;
+          }
+        }
+        .janr{
+          width: 100%;
+          height: 15%;
+          @include flex-between-column;
+
+          div{
+            width: 50%;
+            height: 45%;
+            @include flex-between;
+
+            &:last-child{
+              width: 60%;
+            }
+          }
+          .s_1_active{
+            border: 1px solid green;
+            color: rgb(0, 128, 0);
+          }
+          p{
+            width: 24%;
+            height: 70%;
+            border-radius: 4rem;
+            border: 1px solid #e1e1e1;
+            cursor: pointer;
+            color: rgb(90, 90, 90);
+            text-align: center;
+            vertical-align: middle;
+            @include flex-center;
+
+            &:hover{
+              border: 1px solid green;
+              color: green;
+            }
+          }
+          button{
+            width: 24%;
+            height: 74%;
+            border: 1px solid orange;
+            color: orange;
+            background: rgba(0, 0, 0, 0);
+            border-radius: 4rem;
+          }
+        }
+      }
+    }
+    .s_1_cont{
+      width: 100%;
+      height: 60%;
+      @include flex-between;
+
+      &__left_block{
+        width: 50%;
+        height: 100%;
+        @include flex-between-column;
+        align-items: start;
+
+        .text{
+          width: 100%;
+          height: 30%;
+          @include flex-between-column;
+          align-items: start;
+
+          p{
+            font-size: 2rem;
+          }
+          h2{
+            span{
+              font-size: 3rem;
+              color: green;
+            }
+          }
+          span{
+            color: orange;
+            font:{
+              size: 3rem;
+              weight: 500;
+            }
+            cursor: pointer;
+          }
+        }
+        .filter{
+          width: 100%;
+          height: 12%;
+          @include grid(4, 2, 1%);
+          align-items: start;
+
+          button{
+            border: 1px solid #e1e1e1;
+            background: transparent;
+            width: auto;
+            height: 90%;
+            border-radius: 4rem;
+          }
+        }
+        .info{
+          width: 100%;
+          height: 10%;
+
+          button{
+            width: 100%;
+            height: 70%;
+            background: transparent;
+            border: 1px solid #e1e1e1;
+            @include flex-evenly;
+            border-radius: 2rem;
+            font-size: 2.5rem;
+          }
+        }
+      }
+      &__right_block{
+        width: 40%;
+        height: 60%;
+        @include flex-center;
+
+        img{
+          width: 100%;
+          position: relative;
+          bottom: 10%;
+        }
+        button{
+          position: absolute;
+          border: 1px solid #e1e1e1;
+          background: white;
+        }
+        .settings{
+          z-index: 2;
+          top: 8%;
+          left: 80%;
+          width: 2.5%;
+          @include flex-center;
+          height: 1.5%;
+          border-radius: 2rem;
+
+          img{
+            top: 1%;
+            width: 50%;
+          }
+        }
+        .entering{
+          z-index: 2;
+          top: 13%;
+          left: 54%;
+          width: 7%;
+          @include flex-center;
+          height: 1%;
+          border-radius: 2rem;
+          color: green;
+          font-size: 2rem;
+        }
+        .stars{
+          top: 24%;
+          width: 10%;
+          @include flex-around;
+          height: 1.5%;
+          border-radius: 2rem;
+
+          img{
+            top: 0.1%;
+            width: 17%;
+          }
+        }
+      }
+    }
+  }
+  .section_2{
+    width: 70%;
+    height: 100vh;
+    @include flex-between-column;
+
+    .s_2_cont{
+      width: 100%;
+      height: 90%;
+      @include grid(4, 3, 1%);
+
+      .made_s_2_card {
+        width: 100%;
+        height: 100%;
+        @include flex-evenly-column;
+        transition: .2s;
+
+        &:hover{
+          cursor: pointer;
+          background-color: rgba(0, 128, 0, 0.4);
+        }
+        img{
+          width: 40%;
+        }
+        span{
+          color: green;
+          font-size: 3rem;
+        }
+      }
+      .s_2_card{
+        border-radius: 3rem;
+        border: #e1e1e1 solid 1px;
+        width: 100%;
+        height: 100%;
+        @include flex-between-column;
+        align-items: start;
+
+        img{
+          width: 100%;
+        }
+        h2{
+          width: 45%;
+          @include flex-center;
+        }
+        span{
+          width: 40%;
+          height: 20%;
+          @include flex-center;
+          color: green;
+          font-size: 2.5rem;
+        }
+      }
+    }
+    button{
+      width: 30%;
+      height: 5%;
+      @include load_more;
+    }
+  }
+  .section_3{
+    width: 70%;
+    height: 70vh;
+    @include flex-between-column;
+
+    .s_3_text{
+      width: 100%;
+      height: 8%;
+      @include flex-between-column;
+      align-items: start;
+
+      div{
+        width: 22%;
+        @include flex-between;
+
+        span{
+          color: green;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+        p{
+          cursor: pointer;
+        }
+      }
+    }
+    .s_3_cont{
+      width: 100%;
+      height: 80%;
+      @include grid(3, 2, 1%);
+
+      .s_3_card {
+        border-radius: 3rem;
+        border: #e1e1e1 solid 1px;
+        width: 100%;
+        height: 95%;
+        @include flex-between-column;
+
+        &__profile{
+          width: 90%;
+          height: 50%;
+          @include flex-between;
+
+          div{
+            width: 70%;
+            height: 80%;
+            @include flex-between-column;
+            align-items: start;
+
+            .star_cont{
+              width: 40%;
+              @include flex-between;
+            }
+          }
+        }
+        .p_block{
+          width: 100%;
+          height: 50%;
+          @include flex-center;
+
+          p{
+            width: 90%;
+          }
+        }
+      }
+    }
+    button{
+      width: 30%;
+      height: 7%;
+      @include load_more;
+    }
+  }
+}
+footer{
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  height: 35vh;
+  @include flex-center;
+
+  section{
+    width: 70%;
+    height: 90%;
+    @include flex-between-column;
+
+    div{
+      &:first-child{
+        width: 100%;
+        height: 60%;
+        @include flex-between;
+        align-items: start;
+
+        h2{
+          font-size: 3.5rem;
+        }
+        .s_5_block{
+          width: 15%;
+          height: 100%;
+          @include flex-between-column;
+          justify-content: start;
+          align-items: start;
+
+          p{
+            cursor: pointer;
+            line-height: 200%;
+
+            &:first-child{
+              line-height: 300%;
+            }
+          }
+        }
+        .web{
+          width: 20%;
+          height: 60%;
+          @include flex-between-column;
+          align-items: start;
+
+          .list{
+            width: 100%;
+            height: 50%;
+            @include flex-between;
+
+            img{
+              cursor: pointer;
+              transition: 0.2s;
+
+              &:hover{
+                mask-image: linear-gradient(rgba(0, 128, 0, 1), rgba(0, 128, 0, 1));
+              }
+            }
+          }
+        }
+      }
+      &:last-child{
+        width: 60%;
+        height: 20%;
+        @include flex-center;
+      }
+    }
+  }
+}

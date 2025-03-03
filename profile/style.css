@@ -1,0 +1,653 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.show {
+  display: flex !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scrollbar-width: none;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.fast_search {
+  width: 10%;
+  height: 3%;
+  left: 0;
+  top: 10%;
+  position: absolute;
+  background: orange;
+  color: white;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.fast_search div {
+  width: 60%;
+  height: 50%;
+}
+.fast_search div p {
+  width: 80%;
+  color: white;
+  font-size: 3rem;
+}
+
+p {
+  color: gray;
+  letter-spacing: 0.08rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.section_1_active {
+  border: 1px solid green;
+  color: green;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.display_none {
+  visibility: hidden;
+}
+
+.standart_button {
+  width: 100%;
+  height: 15%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all 0.2s;
+  font-size: 2rem;
+}
+.standart_button:hover {
+  background-color: green;
+  color: white;
+}
+
+header {
+  position: fixed;
+  z-index: 999;
+  background: white;
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav img {
+  cursor: pointer;
+}
+header nav .nav_menu {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav .nav_button {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav .nav_button button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+header nav .nav_button .profile {
+  width: 17%;
+}
+
+main {
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  height: 270vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .section_1 {
+  width: 70%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section_1 .popup {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  z-index: 999;
+  z-index: 1000;
+  bottom: 0;
+  display: none;
+}
+main .section_1 .popup__cont {
+  width: 70%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-direction: column;
+}
+main .section_1 .popup__cont p {
+  cursor: pointer;
+}
+main .section_1 .popup__cont .search {
+  width: 50%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_1 .popup__cont .search input {
+  width: 100%;
+  height: 35%;
+  border: 1px solid #e1e1e1;
+  font-size: 2rem;
+  border-bottom-left-radius: 4rem;
+  border-top-left-radius: 4rem;
+}
+main .section_1 .popup__cont .search input::placeholder {
+  position: relative;
+  left: 5%;
+}
+main .section_1 .popup__cont .search button {
+  width: 30%;
+  height: 35%;
+  border: none;
+  color: white;
+  background-color: orange;
+  border-bottom-right-radius: 4rem;
+  border-top-right-radius: 4rem;
+}
+main .section_1 .popup__cont span {
+  color: green;
+}
+main .section_1 .popup__cont h1 {
+  letter-spacing: 0.05rem;
+  width: 54%;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
+main .section_1 .popup__cont .janr {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .section_1 .popup__cont .janr div {
+  width: 50%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_1 .popup__cont .janr div:last-child {
+  width: 60%;
+}
+main .section_1 .popup__cont .janr .s_1_active {
+  border: 1px solid green;
+  color: rgb(0, 128, 0);
+}
+main .section_1 .popup__cont .janr p {
+  width: 24%;
+  height: 70%;
+  border-radius: 4rem;
+  border: 1px solid #e1e1e1;
+  cursor: pointer;
+  color: rgb(90, 90, 90);
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section_1 .popup__cont .janr p:hover {
+  border: 1px solid green;
+  color: green;
+}
+main .section_1 .popup__cont .janr button {
+  width: 24%;
+  height: 74%;
+  border: 1px solid orange;
+  color: orange;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+}
+main .section_1 .s_1_cont {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_1 .s_1_cont__left_block {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_1 .s_1_cont__left_block .text {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_1 .s_1_cont__left_block .text p {
+  font-size: 2rem;
+}
+main .section_1 .s_1_cont__left_block .text h2 span {
+  font-size: 3rem;
+  color: green;
+}
+main .section_1 .s_1_cont__left_block .text span {
+  color: orange;
+  font-size: 3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+main .section_1 .s_1_cont__left_block .filter {
+  width: 100%;
+  height: 12%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1%;
+  align-items: start;
+}
+main .section_1 .s_1_cont__left_block .filter button {
+  border: 1px solid #e1e1e1;
+  background: transparent;
+  width: auto;
+  height: 90%;
+  border-radius: 4rem;
+}
+main .section_1 .s_1_cont__left_block .info {
+  width: 100%;
+  height: 10%;
+}
+main .section_1 .s_1_cont__left_block .info button {
+  width: 100%;
+  height: 70%;
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  border-radius: 2rem;
+  font-size: 2.5rem;
+}
+main .section_1 .s_1_cont__right_block {
+  width: 40%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section_1 .s_1_cont__right_block img {
+  width: 100%;
+  position: relative;
+  bottom: 10%;
+}
+main .section_1 .s_1_cont__right_block button {
+  position: absolute;
+  border: 1px solid #e1e1e1;
+  background: white;
+}
+main .section_1 .s_1_cont__right_block .settings {
+  z-index: 2;
+  top: 8%;
+  left: 80%;
+  width: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5%;
+  border-radius: 2rem;
+}
+main .section_1 .s_1_cont__right_block .settings img {
+  top: 1%;
+  width: 50%;
+}
+main .section_1 .s_1_cont__right_block .entering {
+  z-index: 2;
+  top: 13%;
+  left: 54%;
+  width: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1%;
+  border-radius: 2rem;
+  color: green;
+  font-size: 2rem;
+}
+main .section_1 .s_1_cont__right_block .stars {
+  top: 24%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 1.5%;
+  border-radius: 2rem;
+}
+main .section_1 .s_1_cont__right_block .stars img {
+  top: 0.1%;
+  width: 17%;
+}
+main .section_2 {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .section_2 .s_2_cont {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1%;
+}
+main .section_2 .s_2_cont .made_s_2_card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.2s;
+}
+main .section_2 .s_2_cont .made_s_2_card:hover {
+  cursor: pointer;
+  background-color: rgba(0, 128, 0, 0.4);
+}
+main .section_2 .s_2_cont .made_s_2_card img {
+  width: 40%;
+}
+main .section_2 .s_2_cont .made_s_2_card span {
+  color: green;
+  font-size: 3rem;
+}
+main .section_2 .s_2_cont .s_2_card {
+  border-radius: 3rem;
+  border: #e1e1e1 solid 1px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_2 .s_2_cont .s_2_card img {
+  width: 100%;
+}
+main .section_2 .s_2_cont .s_2_card h2 {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section_2 .s_2_cont .s_2_card span {
+  width: 40%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  font-size: 2.5rem;
+}
+main .section_2 button {
+  width: 30%;
+  height: 5%;
+  border: 1px solid green;
+  color: green;
+  border-radius: 4rem;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.2s;
+  font-size: 2rem;
+}
+main .section_2 button:hover {
+  background: green;
+  color: white;
+  border: none;
+}
+main .section_3 {
+  width: 70%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .section_3 .s_3_text {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_3 .s_3_text div {
+  width: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_3 .s_3_text div span {
+  color: green;
+  font-size: 2rem;
+  cursor: pointer;
+}
+main .section_3 .s_3_text div p {
+  cursor: pointer;
+}
+main .section_3 .s_3_cont {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1%;
+}
+main .section_3 .s_3_cont .s_3_card {
+  border-radius: 3rem;
+  border: #e1e1e1 solid 1px;
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .section_3 .s_3_cont .s_3_card__profile {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_3 .s_3_cont .s_3_card__profile div {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_3 .s_3_cont .s_3_card__profile div .star_cont {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_3 .s_3_cont .s_3_card .p_block {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section_3 .s_3_cont .s_3_card .p_block p {
+  width: 90%;
+}
+main .section_3 button {
+  width: 30%;
+  height: 7%;
+  border: 1px solid green;
+  color: green;
+  border-radius: 4rem;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.2s;
+  font-size: 2rem;
+}
+main .section_3 button:hover {
+  background: green;
+  color: white;
+  border: none;
+}
+
+footer {
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer section {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+footer section div:first-child {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: start;
+}
+footer section div:first-child h2 {
+  font-size: 3.5rem;
+}
+footer section div:first-child .s_5_block {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: start;
+  align-items: start;
+}
+footer section div:first-child .s_5_block p {
+  cursor: pointer;
+  line-height: 200%;
+}
+footer section div:first-child .s_5_block p:first-child {
+  line-height: 300%;
+}
+footer section div:first-child .web {
+  width: 20%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+footer section div:first-child .web .list {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+footer section div:first-child .web .list img {
+  cursor: pointer;
+  transition: 0.2s;
+}
+footer section div:first-child .web .list img:hover {
+  mask-image: linear-gradient(rgb(0, 128, 0), rgb(0, 128, 0));
+}
+footer section div:last-child {
+  width: 60%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

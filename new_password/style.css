@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+p {
+  color: gray;
+  letter-spacing: 0.08rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.display_none {
+  visibility: hidden;
+  width: 1%;
+  height: 1%;
+}
+
+.standart_button {
+  width: 100%;
+  height: 15%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all 0.2s;
+  font-size: 2rem;
+}
+.standart_button:hover {
+  background-color: green;
+  color: white;
+}
+
+span {
+  color: orange;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main h1 {
+  font-size: 4rem;
+}
+main section {
+  width: 70vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main section div {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+main section div div {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main section div div .cont {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main section div div .cont .top {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main section div div .cont .middle {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main section div div .cont .middle input {
+  width: 100%;
+  height: 15%;
+  border: none;
+  font-size: 2rem;
+}
+main section div div .cont .middle input::placeholder {
+  position: relative;
+  left: 5%;
+}
+main section div div .cont .buttons {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main section div div .cont .buttons button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: center;
+  border-radius: 4rem;
+  background-color: green;
+  color: white;
+}
+main section div div .cont .bottom {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section .img {
+  position: relative;
+  left: 21.5%;
+  width: 50vw;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */

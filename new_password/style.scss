@@ -1,0 +1,146 @@
+@import
+'../mixins.scss';
+*{
+  @include mp_0;
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+a{
+  @include black_classic_a;
+  font-size: 2rem;
+}
+h2{
+  font:{
+    size: 2.8rem;
+    weight: 500;
+  }
+}
+p{
+  color: gray;
+  letter-spacing: 0.08rem;
+  font:{
+    size: 1.8rem;
+    weight: 300;
+  }
+}
+button{
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.display_none{
+  visibility: hidden;
+  width: 1%;
+  height: 1%;
+}
+.standart_button{
+  width: 100%;
+  height: 15%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all .2s;
+  font-size: 2rem;
+
+  &:hover{
+    background-color: green;
+    color: white;
+  }
+}
+span{
+  color: orange;
+  font:{
+    size: 2rem;
+    weight: 500;
+  }
+  cursor: pointer;
+}
+main{
+  width: 100vw;
+  height: 100vh;
+  @include flex-center;
+
+  h1{
+    font-size: 4rem;
+  }
+  section{
+    width: 70vw;
+    height: 90vh;
+    @include flex-between;
+    
+    div{
+      width: 50vw;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      div{
+        width: 90%;
+        height: 100%;
+        @include flex-between-column;
+        align-items: start;
+
+        .cont{
+          width: 100%;
+          height: 50%;
+          @include flex-between-column;
+
+          .top{
+            width: 100%;
+            height: 15%;
+            @include flex-between-column;
+            align-items: start;
+          }
+          .middle{
+            width: 100%;
+            height: 40%;
+            @include flex-between-column;
+            align-items: start;
+
+            input{
+              width: 100%;
+              height: 15%;
+              border: none;
+              font-size: 2rem;
+
+              &::placeholder{
+                position: relative;
+                left: 5%;
+              }
+            }
+          }
+          .buttons{
+            width: 100%;
+            height: 10%;
+            @include flex-between-column;
+
+            button{
+              width: 100%;
+              height: 100%;
+              border: none;
+              text-align: center;
+              border-radius: 4rem;
+              background-color: green;
+              color: white;
+            }
+          }
+          .bottom{
+            width: 100%;
+            height: 10%;
+            @include flex-center;
+          }
+        }
+      }
+    }
+    .img{
+      position: relative;
+      left: 21.5%;
+      width: 50vw;
+      height: 100vh;
+    }
+  }
+}

@@ -1,0 +1,392 @@
+@import
+'../mixins.scss';
+*{
+  @include mp_0;
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+a{
+  @include black_classic_a;
+  font-size: 2rem;
+}
+h2{
+  font:{
+    size: 2.8rem;
+    weight: 500;
+  }
+}
+p{
+  color: gray;
+  letter-spacing: 0.08rem;
+  font:{
+    size: 1.8rem;
+    weight: 300;
+  }
+}
+.green_span{
+  font-size: 2.2rem;
+  color: green;
+}
+.section_1_active{
+  border: 1px solid green;
+  color: green;
+}
+button{
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.display_none{
+  visibility: hidden;
+}
+.standart_button{
+  position: relative;
+  left: 35%;
+  width: 30%;
+  height: 5%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all .2s;
+  font-size: 2rem;
+
+  &:hover{
+    background-color: green;
+    color: white;
+  }
+}
+header{
+  @include fixed;
+  background: white;
+  width: 100vw;
+  height: 8vh;
+  @include flex-center;
+
+  nav{
+    width: 70%;
+    height: 100%;
+    @include flex-between;
+
+    img{
+      cursor: pointer;
+    }
+    .nav_menu{
+      width: 40%;
+      height: 100%;
+      @include flex-between;
+    }
+    .nav_button{
+      width: 30%;
+      height: 100%;
+      @include flex-between;
+
+      button{
+        border: none;
+        @include flex-center;
+        background: transparent;
+      }
+      .profile{
+        width: 17%;
+      }
+    }
+  }
+}
+main{
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  @include flex-between-column;
+
+  .section_1{
+    width: 70%;
+    height: 125vh;
+    @include flex-between;
+    align-items: start;
+
+    .value_off{
+      position: relative;
+      left: 2.5%;
+      @include flex-between;
+      width: 90%;
+    }
+    .packedge{
+      position: relative;
+      top: 11%;
+      width: 40%;
+      height: 100%;
+      @include b_border;
+      @include flex-between-column;
+      border-radius: 2rem;
+      align-items: start;
+
+      .standart_button{
+        width: 40%;
+        height: 5%;
+        left: 30%;
+      }
+      h1{
+        position: relative;
+        left: 2.5%;
+        font-size: 3rem;
+      }
+      h2{
+        position: relative;
+        left: 2.5%;
+      }
+      p{
+        position: relative;
+        left: 2.5%;
+      }
+      .question{
+        height: 20%;
+        @include flex-between-column;
+        align-items: start;
+
+        .line{
+          position: relative;
+          left: 2.5%;
+          width: 95%;
+          height: 1px;
+          background-color: #e1e1e1;
+        }
+      }
+      .s_1_profile{
+        width: 100%;
+        height: 15%;
+        @include b_border;
+        border-radius: 2rem;
+        @include flex-around;
+
+        .text{
+          width: 70%;
+          height: 90%;
+          @include flex-evenly-column;
+          align-items: start;
+
+          .stars{
+            width: 70%;
+            height: 30%;
+            @include flex-between;
+
+            &__star_block{
+              width: 60%;
+              @include flex-between;
+            }
+          }
+        }
+        img{
+          width: 25%;
+        }
+      }
+    }
+    .s_1_text{
+      width: 55%;
+      height: 100%;
+      @include b_border;
+      border-radius: 3rem;
+      @include flex-between-column;
+      align-items: start;
+
+      p{
+        position: relative;
+        left: 2.5%;
+      }
+      h2{
+        position: relative;
+        left: 2.5%;
+        width: 90%;
+      }
+      &__top{
+        width: 100%;
+        height: 4%;
+        @include flex-between;
+
+        h1{
+          font-size: 3.5rem;
+          width: 60%;
+        }
+        .value{
+          width: 30%;
+          height: 90%;
+          @include flex-between-column;
+          align-items: end;
+        }
+      }
+      img{
+        width: 100%;
+      }
+      &__teg{
+        width: 55%;
+        height: 2%;
+        @include flex-evenly;
+
+        img{
+          position: relative;
+          left: 3%;
+          width: 2%;
+        }
+      }
+      .grid_block{
+        position: relative;
+        left: 2.5%;
+        width: 95%;
+        @include grid(4, 1, 5%);
+
+        img{
+          width: 100%;
+          border-radius: 2rem;
+        }
+      }
+      .p{
+        width: 90%;
+      }
+      h1{
+        font-size: 3rem;
+        font-weight: 600;
+        position: relative;
+        left: 2.5%;
+      }
+      .question{
+        height: 20%;
+        @include flex-between-column;
+        align-items: start;
+
+        .line{
+          position: relative;
+          left: 2.5%;
+          width: 95%;
+          height: 1px;
+          background-color: #e1e1e1;
+        }
+      }
+    }
+  }
+  .section_2{
+    width: 70%;
+    height: 95vh;
+    @include flex-between;
+
+    .s_2_text {
+      width: 55%;
+      height: 100%;
+      @include flex-between-column;
+      align-items: start;
+
+      h1{
+        font-size: 3rem;
+      }
+      .plus_minus{
+        @include flex-between;
+        width: 40%;
+      }
+      .card{
+        width: 100%;
+        @include b_border;
+        height: 15%;
+        border-radius: 1rem;
+        @include flex-around-column;
+
+        p{
+          width: 95%;
+        }
+        .profile{
+          width: 95%;
+          height: 50%;
+          @include flex-between;
+
+          .stars{
+            width: 85%;
+            @include flex-between-column;
+            align-items: start;
+            height: 90%;
+
+            &__star{
+              width: 20%;
+              @include flex-between;
+
+              img{
+                width: 18%;
+              }
+            }
+          }
+          img{
+            width: 10%;
+          }
+        }
+      }
+    }
+    .display_none{
+      width: 40%;
+    }
+  }
+}
+footer{
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  height: 35vh;
+  @include flex-center;
+
+  section{
+    width: 70%;
+    height: 90%;
+    @include flex-between-column;
+
+    div{
+      &:first-child{
+        width: 100%;
+        height: 60%;
+        @include flex-between;
+        align-items: start;
+
+        h2{
+          font-size: 3.5rem;
+        }
+        .s_5_block{
+          width: 15%;
+          height: 100%;
+          @include flex-between-column;
+          justify-content: start;
+          align-items: start;
+
+          p{
+            cursor: pointer;
+            line-height: 200%;
+
+            &:first-child{
+              line-height: 300%;
+            }
+          }
+        }
+        .web{
+          width: 20%;
+          height: 60%;
+          @include flex-between-column;
+          align-items: start;
+
+          .list{
+            width: 100%;
+            height: 50%;
+            @include flex-between;
+
+            img{
+              cursor: pointer;
+              transition: 0.2s;
+
+              &:hover{
+                mask-image: linear-gradient(rgba(0, 128, 0, 1), rgba(0, 128, 0, 1));
+              }
+            }
+          }
+        }
+      }
+      &:last-child{
+        width: 60%;
+        height: 20%;
+        @include flex-center;
+      }
+    }
+  }
+}

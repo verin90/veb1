@@ -1,0 +1,141 @@
+@import
+'../mixins.scss';
+*{
+  @include mp_0;
+}
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+a{
+  @include black_classic_a;
+  font-size: 2rem;
+}
+.orange_span{
+  @include orange_span(2.5rem);
+}
+.show{
+  display: flex !important;
+  @include flex-center;
+  scrollbar-width: none;
+}
+h1{
+  font:{
+    size: 3.5rem;
+    weight: 500;
+  }
+}
+h2{
+  font:{
+    size: 2.8rem;
+    weight: 500;
+  }
+}
+p{
+  color: gray;
+  letter-spacing: 0.08rem;
+  font:{
+    size: 1.8rem;
+    weight: 300;
+  }
+}
+.section_1_active{
+  border: 1px solid green;
+  color: green;
+}
+button{
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.display_none{
+  visibility: hidden;
+}
+.gray_button{
+  width: 20%;
+  height: 30%;
+  border: none;
+  color: gray;
+  background: rgba(203, 203, 203, 1);
+  border-radius: 4rem;
+  transition: all .2s;
+  font-size: 2rem;
+}
+.standart_button{
+  width: 20%;
+  height: 30%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all .2s;
+  font-size: 2rem;
+
+  &:hover{
+    background-color: green;
+    color: white;
+  }
+}
+header{
+  @include fixed;
+  background: white;
+  width: 100vw;
+  height: 8vh;
+  @include flex-center;
+
+  nav{
+    width: 70%;
+    height: 100%;
+    @include flex-between;
+
+    img{
+      cursor: pointer;
+    }
+    .nav_menu{
+      width: 40%;
+      height: 100%;
+      @include flex-between;
+    }
+    .nav_button{
+      width: 30%;
+      height: 100%;
+      @include flex-between;
+
+      button{
+        border: none;
+        @include flex-center;
+        background: transparent;
+      }
+      .profile{
+        width: 17%;
+      }
+    }
+  }
+}
+main{
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  height: 90vh;
+  @include flex-between-column;
+
+  .section_1{
+    @include flex-between-column;
+    width: 70%;
+    height: 70%;
+
+    .s_1_block{
+      width: 100%;
+      height: 80%;
+      @include flex-center;
+
+      img{
+        width: 40%;
+      }
+    }
+  }
+  .button_block{
+    width: 70%;
+    height: 20%;
+    @include flex-between;
+  }
+}
