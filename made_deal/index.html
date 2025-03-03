@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="../first_page/index.html"><img src="../img/logo.png" alt=""></a>
+        <div class="nav_menu">
+            <a href="../first_page/index.html">Биржа</a>
+            <a href="../all_work_page/index.html">Ворки</a>
+            <a href="../contest/index.html">Конкурсы</a>
+            <a href="../made_order/index.html">Создать заказ</a>
+        </div>
+        <div class="nav_button">
+            <button onclick="location.href='../favorites/index.html'"><img src="../img/fold_star.png" alt=""></button>
+            <button onclick="location.href=''"><img src="../img/bell.png" alt=""></button>
+            <button onclick="location.href='../chat/index.html'"><img src="../img/chat.png" alt=""></button>
+            <a>Ернар Ибрагимов</a>
+            <img class="profile" onclick="location.href='../profile/index.html'" src="../img/profile_photo.png" alt="">
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="section_1">
+        <div class="main">
+            <div class="text_block">
+                <h2>Название </h2>
+                <input type="text" placeholder="Placeholder">
+            </div>
+            <div class="text_block">
+                <h1>Описание</h1>
+                <input type="text" placeholder="Кратко опишите свой ворк">
+            </div>
+            <div class="inputs">
+                <div class="add_input">
+                    <h2>Категория</h2>
+                    <input type="text" placeholder="Placeholder">
+                </div>
+                <div class="add_input">
+                    <h2>Подкатегория</h2>
+                    <input type="text" placeholder="Placeholder">
+                </div>
+            </div>
+            <div class="input_block">
+                <h2>Срок выполнения работы в днях</h2>
+                <input type="text" placeholder="Placeholder">
+            </div>
+            <div class="input_block">
+                <h2>Бюджет в тенге</h2>
+                <input type="text" placeholder="Placeholder">
+            </div>
+            <h2>Документы</h2>
+            <div class="upload_block">
+                <img src="../img/upload.png" alt="">
+            </div>
+        </div>
+        <div class="display_none"></div>
+    </section>
+    <div class="button_block">
+        <button onclick="location.href='../first_page'" class="gray_button">Назад</button>
+        <button onclick="location.href='../profile'" class="standart_button">Дальше</button>
+    </div>
+</main>
+<script src="../script.js"></script>
+</body>
+</html>

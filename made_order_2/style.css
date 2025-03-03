@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+.gray_button {
+  width: 20%;
+  height: 30%;
+  border: none;
+  color: gray;
+  background: rgb(203, 203, 203);
+  border-radius: 4rem;
+  transition: all 0.2s;
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+p {
+  color: gray;
+  letter-spacing: 0.08rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.section_1_active {
+  border: 1px solid green;
+  color: green;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.display_none {
+  visibility: hidden;
+}
+
+.standart_button {
+  width: 20%;
+  height: 30%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all 0.2s;
+  font-size: 2rem;
+}
+.standart_button:hover {
+  background-color: green;
+  color: white;
+}
+
+header {
+  position: fixed;
+  z-index: 999;
+  background: white;
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav img {
+  cursor: pointer;
+}
+header nav .nav_menu {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav .nav_button {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav .nav_button button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+header nav .nav_button .profile {
+  width: 17%;
+}
+
+main {
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  height: 100%;
+}
+main .section_1 .middle_block {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_1 .middle_block .progress {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_1 .middle_block .main_block {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_1 .middle_block .main_block input {
+  width: 100%;
+  height: 12%;
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  font-size: 2rem;
+}
+main .section_1 .middle_block .main_block input::placeholder {
+  position: relative;
+  left: 5%;
+}
+main .section_1 .middle_block .main_block .input_block {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_1 .middle_block .main_block .input_block div {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_1 .middle_block .main_block .input_block div input {
+  width: 100%;
+  height: 50%;
+}
+main .section_1 .middle_block .main_block .input {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_1 .middle_block .main_block .input input {
+  width: 100%;
+  height: 50%;
+}
+main .section_1 .middle_block .main_block .time {
+  width: 70%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_1 .middle_block .main_block .teg_block {
+  width: 100%;
+  height: 15%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2%;
+}
+main .section_1 .middle_block .main_block .teg_block button {
+  border: none;
+  border-radius: 4rem;
+  background-color: #e1e1e1;
+}
+main .section_1 .button_block {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=style.css.map */

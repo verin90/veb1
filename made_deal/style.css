@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.orange_span {
+  color: orange;
+  font-size: 2.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.show {
+  display: flex !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scrollbar-width: none;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+p {
+  color: gray;
+  letter-spacing: 0.08rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.section_1_active {
+  border: 1px solid green;
+  color: green;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.display_none {
+  visibility: hidden;
+}
+
+.gray_button {
+  width: 20%;
+  height: 30%;
+  border: none;
+  color: gray;
+  background: rgb(203, 203, 203);
+  border-radius: 4rem;
+  transition: all 0.2s;
+  font-size: 2rem;
+}
+
+.standart_button {
+  width: 20%;
+  height: 30%;
+  border: 1px solid green;
+  color: green;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 4rem;
+  transition: all 0.2s;
+  font-size: 2rem;
+}
+.standart_button:hover {
+  background-color: green;
+  color: white;
+}
+
+header {
+  position: fixed;
+  z-index: 999;
+  background: white;
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav img {
+  cursor: pointer;
+}
+header nav .nav_menu {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav .nav_button {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav .nav_button button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+header nav .nav_button .profile {
+  width: 17%;
+}
+
+main {
+  position: relative;
+  top: 10vh;
+  width: 100vw;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .section_1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 70%;
+  height: 85%;
+}
+main .section_1 .display_none {
+  width: 50%;
+}
+main .section_1 .main {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_1 .main .inputs {
+  width: 90%;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .section_1 .main .inputs .add_input {
+  width: 50%;
+  height: 100%;
+}
+main .section_1 .main input {
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  height: 50%;
+  font-size: 2.2rem;
+}
+main .section_1 .main input::placeholder {
+  position: relative;
+  left: 5%;
+}
+main .section_1 .main .text_block {
+  width: 90%;
+  height: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_1 .main .text_block:nth-child(2) {
+  height: 16%;
+}
+main .section_1 .main .text_block:nth-child(2) input {
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  height: 80%;
+  font-size: 2.2rem;
+}
+main .section_1 .main .text_block:nth-child(2) input::placeholder {
+  position: relative;
+  bottom: 35%;
+  left: 5%;
+}
+main .section_1 .main .text_block input {
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  height: 50%;
+  font-size: 2.2rem;
+}
+main .section_1 .main .text_block input::placeholder {
+  position: relative;
+  left: 5%;
+}
+main .section_1 .main .input_block {
+  width: 50%;
+  height: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+main .section_1 .main .input_block input {
+  width: 100%;
+  height: 50%;
+  background: transparent;
+  border: 1px solid #e1e1e1;
+}
+main .section_1 .main .input_block input::placeholder {
+  position: relative;
+  left: 5%;
+}
+main .section_1 .main .upload_block {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+}
+main .section_1 .main .upload_block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  object-repeat: no-repeat;
+}
+main .section_1 .main .imgs {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 2%;
+  height: 12%;
+}
+main .section_1 .main .imgs .add_photo {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  background: rgb(220, 220, 220);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main .section_1 .main .imgs .add_photo img {
+  width: 65%;
+}
+main .section_1 .main .imgs img {
+  width: 100%;
+}
+main .button_block {
+  width: 70%;
+  height: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=style.css.map */
